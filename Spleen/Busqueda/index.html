@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>Busqueda-Spleen</title>
+  <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body style="background: #dc3545;">
+	<style type="text/css">
+		table {
+
+
+			  visibility: visible;
+
+		}
+		section {
+
+			   padding-top: 5%;
+			   visibility: visible;
+		}
+    footer {
+
+
+         visibility: hidden;
+    }
+    #see_more {
+
+        visibility: hidden;
+    }
+	</style>
+  
+
+ 
+  <nav class="navbar navbar-dark navbar-expand-md bg-dark fixed-top">
+   <a class="navbar-brand" href="#">Spleen</a>
+   
+  <a class="nav-link" data-toggle="modal" href="#myModal">Buscar<span class="sr-only">(current)</span></a>
+      
+</nav>
+<div class="bd-example bd-example-modal">
+  <div class="modal" tabindex="-1" role="dialog" id="myModal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content  bg-dark">
+        <div class="modal-header" style="border-bottom: none;">
+          <h5 class="modal-title text-white">!Busca tu Pelicula!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form class="form-inline">
+
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="width: 80%;" autofocus>
+    
+          </form>
+        </div>
+        <div class="modal-footer" style="border-top: none;">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Buscar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <main class="container">
+ 	<section>
+ 		<h1 class="text-white text-center">¡Busca tus Peliculas Favoritas!<br>
+ 		<small>Disfruta de las mejores peliculas desde la comodidad de tu
+ 		hogar y mejor aun,deja que te pagemos por verlas</small></h1>
+ 	</section>
+
+</main>
+<a href="#" style="text-decoration-color: white;"><p class="text-center text-white" id="see_more">Mas Resultados</p></a>
+ 
+
+<footer class="bd-footer text-muted bg-dark">
+  <div class="container-fluid p-3 p-md-5">
+   
+       <p class="text-center">Spleen 2017</p>
+       <p class="text-center" id="hide-follow-us">Siguenos</p>
+<a href="#" style="padding-left: 40%;">
+  <img src="036-facebook.svg" style="width: 5%;padding-top: 1%;">
+</a>
+<a href="#" style="padding-left: 2%;">
+  <img src="008-twitter.svg" style="width: 5%;padding-top: 1%;">
+</a>
+<a href="#" style="padding-left: 2%;">
+  <img src="029-instagram.svg" style="width: 5%;padding-top: 1%;">
+</a>
+    <p class="text-center" style="padding-top: 3%;">All Rights Reserved</p>
+
+  </div>
+</footer>
+<style type="text/css">
+
+      .form-inline {
+
+
+             visibility: visible;
+       }
+       .container {
+
+            padding-top: 4%;
+       }
+       @media screen and (max-width: 360px) {
+
+
+            .container {
+
+                 padding-top: 15%;
+            }
+       }
+
+   
+  </style>
+
+  <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+     <script type="text/javascript" src="popper.min.js"></script>
+     <script type="text/javascript" src="tooltip.js"></script>
+    <script type="text/javascript" src="popover.js"></script>
+    <script type="text/javascript" src="modal.js"></script>
+    <script type="text/javascript" src="util.js"></script>
+    <script type="text/javascript" src="collapse.js"></script>
+    <script type="text/javascript" language="javascript">
+    	$(document).ready( function() {
+    		
+    		$('.btn-primary').click(function(event) {
+
+
+  
+  
+//ajax
+
+     
+    $('main').load('table_result.html');
+     
+
+         $.ajax( {success: function (data) {
+
+
+     var seekpar = $('.form-control').val();
+
+        
+        var url = 'q='+seekpar;
+
+            
+
+            $.get('seek_on_server.php',url,function(data_from_server) {
+
+
+                        alert(data_from_server);
+
+
+              }); 
+
+
+                
+         },
+
+
+        error: function() {
+
+               alert("Ha ocurrido un error");
+          } 
+        });
+
+
+    			$('table').css('visibility','visible');
+    			$('section').css('visibility','hidden');
+    			$('section').css('padding-top','0%');
+          $('footer').css('visibility','visible');
+          $('#see_more').css('visibility','visible');
+
+    		});  
+
+    	});
+        
+    </script>
+</body>
+
+
+</html>
+

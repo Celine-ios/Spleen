@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Pelicula-Spleen</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="player_style.css">
+	     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+	       
+</head>
+<body>
+
+	  <nav class="navbar navbar-dark navbar-expand-md bg-dark fixed-top">
+  <a class="navbar-brand" href="#">Spleen</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="navbar-nav">
+
+       <a class="nav-link" style="color: #007bff;" data-toggle="modal" href="#myModal">Buscar<span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="#">Salir<span class="sr-only">(current)</span></a>
+
+      
+      
+    </div>
+  </div>
+</nav>
+<div class="bd-example bd-example-modal">
+  <div class="modal" tabindex="-1" role="dialog" id="myModal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content  bg-dark">
+        <div class="modal-header" style="border-bottom: none;">
+          <h5 class="modal-title text-white">!Busca tu Pelicula!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form class="form-inline">
+
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="width: 80%;" autofocus>
+    
+          </form>
+        </div>
+        <div class="modal-footer" style="border-top: none;">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Buscar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mainer">
+
+	<section class="container">
+		
+			
+	<div id="reproductor">
+
+	<video id="medio">
+
+		<source src="lol.mp4">
+
+  </video>
+  <nav id="controls" class="bg-dark">
+	<button class="btn btn-primary">Play</button>
+	<div id="path"></div>
+	<div id="progress-bar"></div>
+	<p class="text-right text-white" id="tiempo"></p>
+</nav> 
+</div>
+
+			<aside>
+
+		<h2 class="text-left" style="padding-top: 4%;">Todo el Mundo deberia saber Programar</h2>
+		<p class="text-left" style="color: #dc3545;font-weight: bold;">Informacion</p>
+		<p class="text-left"><span style="color: #dc3545;font-weight: bold;">Director:</span> Lesley Chilcott</p>
+		<p class="text-left"><span style="color: #dc3545;font-weight: bold;">Año de Estreno:</span> 2013</p>
+		<p class="text-left"><span style="color: #dc3545;font-weight: bold;">Genero:</span> Documental</p>
+
+	</aside>
+
+	</section>
+<aside id="other-videos">
+
+		<p class="text-center">Hello World!</p>
+		<p class="text-center">Hello World!</p>
+		<p class="text-center">Hello World!</p>
+		<p class="text-center">Hello World!</p>
+		<p class="text-center">Hello World!</p>
+		<p class="text-center">Hello World!</p>
+		<p class="text-center">Hello World!</p>
+
+	</aside>
+</div>
+<footer class="footer bg-dark">
+  <div class="container" style="padding-bottom: 1%;padding-top: 1%;display: flex;">
+        <span id="span_followus" class="text-left text-white">Siguenos</span>
+        <img src="036-facebook.svg">
+        <img src="008-twitter.svg">
+        <img src="029-instagram.svg">
+        <p id="spleen_footer" class="text-right text-white">Spleen 2018</p>
+      </div>
+    </footer>
+    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+     <script type="text/javascript" src="popper.min.js"></script>
+     <script type="text/javascript" src="tooltip.js"></script>
+    <script type="text/javascript" src="popover.js"></script>
+    <script type="text/javascript" src="modal.js"></script>
+    <script type="text/javascript" src="util.js"></script>
+    <script type="text/javascript" src="collapse.js"></script>
+	<script type="text/javascript" src="reproductor.js"></script>
+</body>
+</html>
